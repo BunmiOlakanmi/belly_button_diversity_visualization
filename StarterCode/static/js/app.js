@@ -35,10 +35,29 @@ function buildCharts(sampleId) {
       var resultArray = samples.filter(sampleObj => sampleObj.id == sampleId);
       var result = resultArray[0];
       console.log(result);
-      
       var otu_ids = result.otu_ids;
       var otu_labels = result.otu_labels;
       var sample_values = result.sample_values;
+
+      var metaData = data.metadata;
+      console.log(metaData);
+
+      var age = metaData.age;
+      var bbtype = metaData.bbtype;
+      var ethnicity = metaData.ethnicity;
+      var gender = metaData.gender;
+      var location = metaData.location;
+      var wfreq = metaData.wfreq;
+
+      function addMetaData(sampleMetaData) {
+        var panel = d3.select("#sample-metadata");
+          panel.append("div").text(age);
+          panel.append("div").text(bbtype);
+          panel.append("div").text(ethnicity);
+          panel.append("div").text(gender);
+          panel.append("div").text(location);
+          panel.append("div").text(wfreq);
+      };
 
       var yticks = otu_ids.slice(0, 10).map(otuID => `OTU ${otuID}`).reverse();
       var barData = [
@@ -51,12 +70,31 @@ function buildCharts(sampleId) {
         }
       ];
 
+      var bubbleData = [
+        {
+          x: otu_ids,
+          y: sample_values,
+          text: otu_labels,
+          mode: 'markers',
+          marker: {
+            size: sample_values,
+            color: otu_ids
+          }
+
+        }
+      ];
+
       var barLayout = {
         title: "Top 10 Bacteria Cultures Found",
         margin: { t: 30, l: 150 }
       };
 
+      var bubbleLayout = {
+        title: "Top 10 Bacteria Cultures Found"
+      }
+
       Plotly.newPlot("bar", barData, barLayout);
+      Plotly.newPlot("bubble", bubbleData, bubbleLayout);
   });
 };
 
@@ -66,6 +104,12 @@ function init() {
       var samples = data.samples;
       var firstSampleId  = samples[0].id;
       buildCharts(firstSampleId);
+      
+      var metaData = data.metadata;
+      console.log(metaData);
+      var firstmetaData = metaData[0].id;
+      console.log(metaData[0]);
+      addMetaData(firstmetaData);
   });
 
 };
