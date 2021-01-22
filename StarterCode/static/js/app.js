@@ -1,32 +1,5 @@
 var data = d3.json("samples.json");
 console.log(data);
-
-// function getData() {
-//   var dropdownMenu = d3.select("#selDataset");
-//   // Assign the value of the dropdown menu option to a variable
-//   var sampleName = dropdownMenu.property("value");
-//   // Initialize an empty array for the country's data
-//   var name = [];
-//   var otu_ids =[];
-//   var otu_labels = [];
-//   var sample_values=[];
-//   var names = data.names;
-//   console.log(names);
-//   for(i = 0; i<=names.length; i++){
-//   //   if (dataset == 'us') {
-//   //     data = us;
-//   // }
-//   // else if (dataset == 'uk') {
-//   //     data = uk;
-//   // }
-//   // else if (dataset == 'canada') {
-//   //     data = canada;
-//   }
-//   // Call function to update the chart
-//   updatePlotly(data);
-
-
-// }
   
 
 function buildCharts(sampleId) {
@@ -38,8 +11,10 @@ function buildCharts(sampleId) {
       var otu_ids = result.otu_ids;
       var otu_labels = result.otu_labels;
       var sample_values = result.sample_values;
+      console.log(otu_ids, sample_values);
 
-      var metaData = data.metadata;
+
+      var metaData = data.metadata.filter(filterObj => filterObj.id == sampleId)[0];
       console.log(metaData);
 
       var age = metaData.age;
@@ -49,15 +24,16 @@ function buildCharts(sampleId) {
       var location = metaData.location;
       var wfreq = metaData.wfreq;
 
-      function addMetaData(sampleMetaData) {
+      // function addMetaData(sampleMetaData) {
         var panel = d3.select("#sample-metadata");
-          panel.append("div").text(age);
-          panel.append("div").text(bbtype);
-          panel.append("div").text(ethnicity);
-          panel.append("div").text(gender);
-          panel.append("div").text(location);
-          panel.append("div").text(wfreq);
-      };
+          panel.html("");
+          panel.append("p").text(age);
+          panel.append("p").text(bbtype);
+          panel.append("p").text(ethnicity);
+          panel.append("p").text(gender);
+          panel.append("p").text(location);
+          panel.append("p").text(wfreq);
+      // };
 
       var yticks = otu_ids.slice(0, 10).map(otuID => `OTU ${otuID}`).reverse();
       var barData = [
@@ -84,19 +60,43 @@ function buildCharts(sampleId) {
         }
       ];
 
+      var guageData =[
+        {
+          domain: {x: [0, 1], y:[0 ,1]},
+          value: 270,
+          title: {
+            text: "Scrubs per Week"
+          },
+          //type: "indicator",
+          mode: "guage+number" 
+        }
+      ];
+
       var barLayout = {
         title: "Top 10 Bacteria Cultures Found",
         margin: { t: 30, l: 150 }
       };
 
       var bubbleLayout = {
-        title: "Top 10 Bacteria Cultures Found"
+        title: "Top 10 Bacteria Cultures Found",
+        //xaxis: "OTU IDs"
+      }
+
+      var guageLayout = {
+        width: 600, 
+        height: 500, 
+        margin: { t: 0, b: 0 } 
       }
 
       Plotly.newPlot("bar", barData, barLayout);
       Plotly.newPlot("bubble", bubbleData, bubbleLayout);
+      Plotly.newPlot("gauge", guageData, guageLayout);
   });
 };
+
+function optionChanged(selectedId){
+  buildCharts(selectedId);
+}
 
 
 function init() {
@@ -109,7 +109,25 @@ function init() {
       console.log(metaData);
       var firstmetaData = metaData[0].id;
       console.log(metaData[0]);
-      addMetaData(firstmetaData);
+     
+
+        var dropdownMenu = d3.select("#selDataset");
+        // Assign the value of the dropdown menu option to a variable
+      
+        
+        // Initialize an empty array for the sample data
+        var ids = [];
+       
+        ids = data.names;
+        console.log(ids);
+        for(i = 0; i<=ids.length; i++){
+           var sampleName = dropdownMenu.append("option").text(ids[i]);
+        // Call function to update the chart
+         
+        }
+        
+      
+
   });
 
 };
