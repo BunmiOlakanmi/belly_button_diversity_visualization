@@ -1,5 +1,5 @@
-var data = d3.json("samples.json");
-console.log(data);
+// var data = d3.json("samples.json");
+// console.log(data);
   
 
 function buildCharts(sampleId) {
@@ -27,12 +27,12 @@ function buildCharts(sampleId) {
       // function addMetaData(sampleMetaData) {
         var panel = d3.select("#sample-metadata");
           panel.html("");
-          panel.append("p").text(age);
-          panel.append("p").text(bbtype);
-          panel.append("p").text(ethnicity);
-          panel.append("p").text(gender);
-          panel.append("p").text(location);
-          panel.append("p").text(wfreq);
+          panel.append("p").text(`age: ${age}`);
+          panel.append("p").text(`bbtype: ${bbtype}`);
+          panel.append("p").text(`ethnicity: ${ethnicity}`);
+          panel.append("p").text(`gender: ${gender}`);
+          panel.append("p").text(`location: ${location}`);
+          panel.append("p").text(`wfreq: ${wfreq}`);
       // };
 
       var yticks = otu_ids.slice(0, 10).map(otuID => `OTU ${otuID}`).reverse();
@@ -73,8 +73,8 @@ function buildCharts(sampleId) {
           //bar: { color: "darkblue" },
           type: "indicator",
           mode: "gauge+number+delta",
-          delta: { reference: 0 },
-          gauge: { axis: { range: [null, 9] } },
+          delta: {reference: 0},
+          gauge: {axis: {range: [null, 9]}},
           threshold: {
             line: {color: "red", width: 4},
             thickness: 0.75,
