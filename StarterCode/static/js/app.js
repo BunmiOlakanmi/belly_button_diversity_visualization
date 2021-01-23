@@ -9,10 +9,8 @@ function buildCharts(sampleId) {
       var otu_labels = result.otu_labels;
       var sample_values = result.sample_values;
       console.log(otu_ids, sample_values);
-
       var metaData = data.metadata.filter(filterObj => filterObj.id == sampleId)[0];
       console.log(metaData);
-
       var age = metaData.age;
       var bbtype = metaData.bbtype;
       var ethnicity = metaData.ethnicity;
@@ -117,6 +115,7 @@ function optionChanged(selectedId){
 
 // Function to initiate the program. 
 function init() {
+  //Read the json file and retrieve the data from samples 
   d3.json("samples.json").then((data) => {
     var samples = data.samples;
     var firstSampleId  = samples[0].id;
@@ -125,7 +124,6 @@ function init() {
     console.log(metaData);
     var firstmetaData = metaData[0].id;
     console.log(metaData[0]);
-    
     // Assign the value of the dropdown menu option to a variable
     var dropdownMenu = d3.select("#selDataset");
     // Initialize an empty array for the sample data
