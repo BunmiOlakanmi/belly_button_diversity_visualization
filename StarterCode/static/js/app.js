@@ -60,15 +60,27 @@ function buildCharts(sampleId) {
         }
       ];
 
-      var guageData =[
+      var guageData = [
         {
-          domain: {x: [0, 1], y:[0 ,1]},
-          value: 270,
-          title: {
-            text: "Scrubs per Week"
+          domain: { x: [0, 1], y: [0, 1] },
+          value: wfreq,
+          title: { text: "Belly Button Washing Frequency: Scrubs per Week"},
+          bgcolor: "light green",
+          steps: [
+            { range: [0, 4,], color: "lightgray" },
+            { range: [5, 8], color: "gray" }
+          ],
+          //bar: { color: "darkblue" },
+          type: "indicator",
+          mode: "gauge+number+delta",
+          delta: { reference: 0 },
+          gauge: { axis: { range: [null, 9] } },
+          threshold: {
+            line: {color: "red", width: 4},
+            thickness: 0.75,
+            value: 9,
           },
-          //type: "indicator",
-          mode: "guage+number" 
+          
         }
       ];
 
@@ -85,7 +97,9 @@ function buildCharts(sampleId) {
       var guageLayout = {
         width: 600, 
         height: 500, 
-        margin: { t: 0, b: 0 } 
+        //margin: { t: 0, b: 0 } 
+        margin: { t: 25, r: 25, l: 25, b: 25 },
+        paper_bgcolor: "white"
       }
 
       Plotly.newPlot("bar", barData, barLayout);
