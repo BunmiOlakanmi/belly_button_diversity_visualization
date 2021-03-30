@@ -1,6 +1,27 @@
-# Plot.ly Homework - Belly Button Biodiversity
+# Belly Button Biodiversity Visualization Project
 
 ![Bacteria by filterforge.com](Images/bacteria.jpg)
+
+#### Description 
+The purpose of this project is to build an interactive dashboard to explore the [Belly Button Biodiversity dataset](http://robdunnlab.com/projects/belly-button-biodiversity/), which catalogs the microbes that colonize human navels.
+
+####  Tools used in this project:
+1.  Javascript
+  Libraries:
+  - D3.js
+  - Plotly.js
+2.  HTML
+
+#### Instructions
+To run this code, ensure that all the above libraries are installed in your environment.
+
+##### Steps
+
+
+
+
+
+query an API with College Metric Data, upload it to a Postgress Database and create multiple and interactive visualizations.
 
 In this assignment, I built an interactive dashboard to explore the [Belly Button Biodiversity dataset](http://robdunnlab.com/projects/belly-button-biodiversity/), which catalogs the microbes that colonize human navels.
 
