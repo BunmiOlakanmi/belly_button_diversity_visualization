@@ -11,12 +11,16 @@ The purpose of this project is to build an interactive dashboard to explore the 
   - D3.js
   - Plotly.js
 2.  HTML
+3.  Visual Studio Code
 
 #### Instructions
 To run this code, ensure that all the above libraries are installed in your environment.
 
 ##### Steps
-
+1.  Pull all the file from this Github repository.
+2.  Open the index.html with a live server from Visual Studio Code. This renders the index.html file containing the visualizations.
+3.  Explore the visualization using the dropdown list on the dashboard.
+ (BButton_Dashboard.png)
 
 
 
