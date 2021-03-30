@@ -40,6 +40,9 @@ To run this code, ensure that all the above libraries are installed in your envi
         * ![Weekly Washing Frequency Gauge](Images/gauge.png)
   
   b. The plots are updated any time that a new sample is selected.
+  
+  ![Dashboard](Images/BellyButton_Dashboard.png)
+  
  
 ### Files in Folder
 1.  index.html file is used to render the dashboard on a webpage.
