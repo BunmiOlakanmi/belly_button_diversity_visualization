@@ -20,6 +20,13 @@ To run this code, ensure that all the above libraries are installed in your envi
 1.  Pull all the file from this Github repository.
 2.  Open the index.html with a live server from Visual Studio Code. This renders the index.html file containing the visualizations.
 3.  Explore the visualization using the dropdown list on the dashboard.
+  a.  For example, when you select a sample using the dropdownlist, you are able to view 
+      -  sample metadata, i.e., an individual's demographic information.
+      -  the top 10 OTUs found in that individual on a horizontal bar
+      -  a bubble chart that displays each sample
+      -  a guage chart that plots the weekly washing frequency of the individual.
+      - 
+  b. The plots are updated any time that a new sample is selected.
  
 ##### Files in Folder
 1.  index.html file is used to render the dashboard on a webpage.
