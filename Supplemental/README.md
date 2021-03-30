@@ -1,3 +1,4 @@
+<img width="634" alt="BellyButton_Dashboard" src="https://user-images.githubusercontent.com/71471355/113067785-3ec3f780-917a-11eb-99c9-a160f487385c.png">
 # Belly Button Biodiversity Visualization Project
 
 ![Bacteria by filterforge.com](Images/bacteria.jpg)
