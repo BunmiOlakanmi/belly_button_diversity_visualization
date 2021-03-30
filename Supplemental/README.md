@@ -20,7 +20,7 @@ The purpose of this project is to build an interactive dashboard to explore the 
 There are two ways to run this project.
 
 #### Using GitHub url
-*  I deployed my dashboard on GitHub Pages. URL: https://bunmiolakanmi.github.io/plotly-challenge/ 
+*  I deployed my dashboard on GitHub Pages. Click the URL: https://bunmiolakanmi.github.io/plotly-challenge/  to open the dashboard on your default web browser.
 
 #### Through index.html in Visual Studio Code
 
@@ -31,17 +31,13 @@ To run this code, ensure that all the above libraries are installed in your envi
   
   a.  For example, when you select a sample using the dropdownlist, you are able to view 
       -  sample metadata, i.e., an individual's demographic information. 
-       
-       ![hw](Images/hw03.png)
+       ![hw](Images/hw03.png) 
       -  the top 10 OTUs found in that individual on a horizontal bar  
-        
-        ![bar Chart](Images/hw01.png)
+        * ![bar Chart](Images/hw01.png)
       -  a bubble chart that displays each sample 
-        
-        ![Bubble Chart](Images/bubble_chart.png)
+        * ![Bubble Chart](Images/bubble_chart.png)
       -  a guage chart that plots the weekly washing frequency of the individual. 
-        
-        ![Weekly Washing Frequency Gauge](Images/gauge.png)
+        * ![Weekly Washing Frequency Gauge](Images/gauge.png)
   
   b. The plots are updated any time that a new sample is selected.
  
