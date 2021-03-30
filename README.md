@@ -30,11 +30,12 @@ To run this code, ensure that all the above libraries are installed in your envi
 3.  Explore the visualization using the dropdown list on the dashboard.
   
   a.  For example, when you select a sample using the dropdownlist, you are able to view 
+  
       -  sample metadata, i.e., an individual's demographic information.  
       -  the top 10 OTUs found in that individual on a horizontal bar  
       -  a bubble chart that displays each sample 
       -  a guage chart that plots the weekly washing frequency of the individual. 
-      -  
+     
   b. The plots are updated any time that a new sample is selected.
   
 <img width="634" alt="BellyButton_Dashboard" src="https://user-images.githubusercontent.com/71471355/113067785-3ec3f780-917a-11eb-99c9-a160f487385c.png">
