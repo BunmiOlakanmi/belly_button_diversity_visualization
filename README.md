@@ -1,6 +1,6 @@
 # Belly Button Biodiversity Visualization Project
 
-![Bacteria by filterforge.com](Images/bacteria.jpg)
+![Bacteria by filterforge.com](Supplemental/Images/bacteria.jpg)
 
 ### Description 
 The purpose of this project is to build an interactive dashboard to explore the [Belly Button Biodiversity dataset](http://robdunnlab.com/projects/belly-button-biodiversity/), which catalogs the microbes that colonize human navels.
