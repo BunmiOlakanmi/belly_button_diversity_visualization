@@ -20,6 +20,14 @@ To run this code, ensure that all the above libraries are installed in your envi
 1.  Pull all the file from this Github repository.
 2.  Open the index.html with a live server from Visual Studio Code. This renders the index.html file containing the visualizations.
 3.  Explore the visualization using the dropdown list on the dashboard.
+ 
+##### Files in Folder
+1.  
+2.  CollegeScorecardDataDictionary.xlsxSupplemental This folder contains the image files used in the README file.
+3.  
+ 
+ 
+ 
  (BButton_Dashboard.png)
 
 
