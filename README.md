@@ -41,7 +41,7 @@ To run this code, ensure that all the above libraries are installed in your envi
 <img width="634" alt="BellyButton_Dashboard" src="https://user-images.githubusercontent.com/71471355/113067785-3ec3f780-917a-11eb-99c9-a160f487385c.png">
   
 ### Files in Folder
-1.  index.html file is used to render the dashboard on a webpage.
-2.  Static: This folder contains the app.js file, which drives the visualization.
-3.  samples.json contains the json data used for the visualization.
+1.  `index.html` file is used to render the dashboard on a webpage.
+2.  Static: This folder contains the `app.js` file, which drives the visualization.
+3.  `samples.json` contains the json data used for the visualization.
 4.  Supplemental: This folder contains the image files used in the README file.
