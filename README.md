@@ -20,7 +20,7 @@ The purpose of this project is to build an interactive dashboard to explore the 
 There are two ways to run this project.
 
 #### Using GitHub url
-*  I deployed my dashboard on GitHub Pages. Click the URL: https://bunmiolakanmi.github.io/plotly-challenge/  to open the dashboard on your default web browser.
+*  I deployed my dashboard on GitHub Pages. Click the URL: https://bunmiolakanmi.github.io/belly_button_diversity_visualization/  to open the dashboard on your default web browser.
 
 #### Through index.html in Visual Studio Code
 
