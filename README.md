@@ -1,4 +1,4 @@
-# Belly Button Biodiversity Visualization Project
+# Belly Button Biodiversity Visualization
 
 ![Bacteria by filterforge.com](Supplemental/Images/bacteria.jpg)
 
